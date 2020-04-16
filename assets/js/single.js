@@ -8,7 +8,10 @@ var getRepoName = function() {
     if(repoName) {
     repoNameEl.textContent = repoName;
     getRepoIssues(repoName);
-    } document.location.replace("./index.html");
+    } 
+    else {
+        document.location.replace("./index.html");
+    }    
 };
 
 var displayWarning = function(repo) {
@@ -71,8 +74,7 @@ var getRepoIssues = function(repo) {
                     displayWarning(repo);
                 }
             });
-        }
-        else {
+        } else {
             document.location.replace("./index.html");
         }
     });
